@@ -20,10 +20,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none             &kp Q  &kp W  &kp F  &kp P  &kp B        &kp J           &kp L  &kp U      &kp Y    &kp P    &to 7
-&to 6             &kp A  &kp R  &kp S  &kp T  &kp G        &kp M           &kp N  &kp E      &kp I    &kp O    &to 6
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp D  &kp V        &kp K           &kp H  &kp COMMA  &kp DOT  &kp SQT  &none
-                                &none  &mo 2  &kp SPACE    &kp LEFT_SHIFT  &sl 1  &mo 5
+&none             &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J           &kp L             &kp U                   &kp Y             &kp P             &to 7
+&to 6             &kp A           &kp R           &kp S               &kp T             &kp G        &kp M           &kp N             &kp E                   &kp I             &kp O             &to 6
+&kp LEFT_CONTROL  &mt LEFT_ALT Z  &mt LEFT_WIN X  &mt LEFT_CONTROL C  &mt LEFT_SHIFT D  &kp V        &kp K           &mt LEFT_SHIFT H  &mt LEFT_CONTROL COMMA  &mt LEFT_WIN DOT  &mt LEFT_ALT SQT  &none
+                                                  &none               &mo 2             &kp SPACE    &kp LEFT_SHIFT  &sl 1             &mo 5
             >;
 
             label = "Normal";
@@ -109,8 +109,8 @@
         Game {
             bindings = <
 &kp GRAVE  &kp TAB    &kp Q  &kp W  &kp E   &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
-&kp ESC    &kp LALT   &kp A  &kp S  &kp S   &kp D        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
-&kp LCTRL  &kp LSHFT  &kp Z  &kp X  &kp X   &kp C        &none     &none     &none         &none      &none  &none
+&kp ESC    &kp LALT   &kp A  &kp S  &kp D   &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
+&kp LCTRL  &kp LSHFT  &kp Z  &kp X  &kp C   &kp V        &none     &none     &none         &none      &none  &none
                              &mo 9  &mo 10  &kp SPACE    &kp DOWN  &to 0     &trans
             >;
 
