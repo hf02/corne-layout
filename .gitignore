@@ -3,3 +3,5 @@ build-left/
 build-right/
 .west/
 zephyr/
+nice-view-gem/
+zmk/
