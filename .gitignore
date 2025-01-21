@@ -1,0 +1,6 @@
+zmk/
+nice-view-gem/
+modules/
+build/
+.west/
+zephyr/
