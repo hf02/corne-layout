@@ -109,10 +109,10 @@
 
         Game {
             bindings = <
-&kp GRAVE  &kp TAB    &kp Q  &kp W  &kp E  &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
-&kp ESC    &kp LALT   &kp A  &kp S  &kp D  &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
-&kp LCTRL  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V        &none     &none     &none         &none      &none  &none
-                             &mo 8  &mo 9  &kp SPACE    &kp DOWN  &to 0     &trans
+&kp GRAVE  &kp TAB    &kp Q  &kp W         &kp E  &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
+&kp ESC    &sl 9      &kp A  &kp S         &kp D  &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
+&kp LCTRL  &kp LSHFT  &kp Z  &kp X         &kp C  &kp V        &none     &none     &none         &none      &none  &none
+                             &kp LEFT_ALT  &mo 8  &kp SPACE    &kp DOWN  &to 0     &trans
             >;
 
             label = "Game";
@@ -134,7 +134,7 @@
 &trans  &trans  &kp N7  &kp N8  &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mo 10  &kp N4  &kp N5  &kp N6  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp N1  &kp N2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+                        &trans  &to 10  &trans    &trans  &trans  &trans
             >;
 
             label = "Game N";
