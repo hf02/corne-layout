@@ -14,5 +14,8 @@ manifest:
         - name: nice-view-gem #new entry
           remote: hf02 #new entry
           revision: main #new entry
+        - name: nice-view-elemental #new entry
+          remote: hf02 #new entry
+          revision: main #new entry
     self:
         path: config
