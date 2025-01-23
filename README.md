@@ -2,7 +2,7 @@
 
 ## Features
 
-- Modified [nice-view-gem](https://github.com/hf02/nice-view-gem). See the repo for more info.
+- Modified [nice-view-element](https://github.com/hf02/nice-view-elemental). See the repo for more info.
 - Gaming layer
   - Includes 3 other layers so you can easily access the numbers, function keys, and right letters all just from your left hand.
   - The right side mostly just there for arrow keys.
