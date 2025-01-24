@@ -16,6 +16,6 @@ manifest:
           revision: main #new entry
         - name: nice-view-turtle #new entry
           remote: hf02 #new entry
-          revision: main #new entry
+          revision: 159c4c1ac4867c491b05ccc0403fc0e9c578e7a8 #new entry
     self:
         path: config
