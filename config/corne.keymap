@@ -53,6 +53,27 @@
             key-positions = <15 14>;
             layers = <0>;
         };
+
+        anki_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <7 19 20 8>;
+            layers = <12>;
+        };
+
+        anki_more {
+            bindings = <&anki_more>;
+            key-positions = <21 9>;
+            layers = <12>;
+        };
+    };
+
+    macros {
+        anki_more: anki_more {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp M>;
+            label = "ANKI_MORE";
+        };
     };
 
     keymap {
@@ -69,7 +90,7 @@
 &none             &kp Q                       &kp W                       &left_alpha_mod LA(LS(LEFT_WIN)) F  &kp P                         &kp B        &kp J           &kp L                          &left_alpha_mod LA(LS(LEFT_WIN)) U   &kp Y                          &kp P                          &none
 &to 5             &kp A                       &kp R                       &kp S                               &kp T                         &kp G        &kp M           &kp N                          &kp E                                &kp I                          &kp O                          &to 5
 &kp LEFT_CONTROL  &left_alpha_mod LEFT_ALT Z  &left_alpha_mod LEFT_WIN X  &left_alpha_mod LEFT_CONTROL C      &left_alpha_mod LEFT_SHIFT D  &kp V        &kp K           &right_alpha_mod LEFT_SHIFT H  &right_alpha_mod LEFT_CONTROL COMMA  &right_alpha_mod LEFT_WIN DOT  &right_alpha_mod LEFT_ALT SQT  &none
-                                                                          &none                               &mo 2                         &kp SPACE    &kp LEFT_SHIFT  &sl 1                          &mo 12
+                                                                          &none                               &mo 2                         &kp SPACE    &kp LEFT_SHIFT  &sl 1                          &mo 13
             >;
 
             label = "Alpha";
@@ -121,10 +142,10 @@
 
         Portal {
             bindings = <
-&to 6  &to 4  &to 3  &to 2  &to 1   &none    &none  &to 1   &to 2   &to 3  &to 4  &to 6
-&to 0  &none  &none  &none  &to 11  &none    &none  &to 11  &none   &none  &none  &to 0
-&none  &none  &none  &none  &none   &none    &none  &none   &none   &none  &none  &none
-                     &none  &none   &none    &none  &none   &trans
+&to 6  &to 4  &to 3   &to 2  &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
+&to 0  &none  &to 12  &none  &to 11  &none    &none  &to 11  &none   &to 12  &none  &to 0
+&none  &none  &none   &none  &none   &none    &none  &none   &none   &none   &none  &none
+                      &none  &none   &none    &none  &none   &trans
             >;
 
             label = "Portl";
@@ -185,7 +206,7 @@
             label = "Game F";
         };
 
-        video {
+        Video {
             bindings = <
 &none  &kp ENTER  &kp UP_ARROW  &kp J      &kp L       &none        &none  &kp SPACE  &kp RIGHT  &kp L     &kp DOT    &none
 &to 0  &kp C      &kp DOWN      &kp LEFT   &kp RIGHT   &none        &none  &kp RET    &kp LEFT   &kp J     &kp COMMA  &none
@@ -196,6 +217,17 @@
             label = "Video";
         };
 
+        Anki {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &kp N3     &kp N4         &kp UP     &none  &none
+&to 0  &none  &none  &none  &none  &none    &none  &kp N1     &kp N2         &kp DOWN   &none  &to 0
+&none  &none  &none  &none  &none  &none    &none  &kp LC(Z)  &kp LS(LC(Z))  &kp SLASH  &none  &none
+                     &none  &to 0  &to 0    &none  &none      &trans
+            >;
+
+            label = "Anki";
+        };
+
         Global {
             bindings = <
 &none   &none  &none  &none  &none  &none    &none  &none       &none              &none            &none  &none
@@ -204,7 +236,7 @@
                       &none  &none  &none    &none  &none       &trans
             >;
 
-            label = "Globl";
+            label = "Global";
         };
     };
 };
