@@ -31,6 +31,16 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3>;
         };
+
+        alpha_mod: alpha_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -87,10 +97,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none             &kp Q                       &kp W                       &left_alpha_mod LA(LS(LEFT_WIN)) F  &kp P                         &kp B        &kp J           &kp L                          &left_alpha_mod LA(LS(LEFT_WIN)) U   &kp Y                          &kp P                          &none
-&to 5             &kp A                       &kp R                       &kp S                               &kp T                         &kp G        &kp M           &kp N                          &kp E                                &kp I                          &kp O                          &to 5
-&kp LEFT_CONTROL  &left_alpha_mod LEFT_ALT Z  &left_alpha_mod LEFT_WIN X  &left_alpha_mod LEFT_CONTROL C      &left_alpha_mod LEFT_SHIFT D  &kp V        &kp K           &right_alpha_mod LEFT_SHIFT H  &right_alpha_mod LEFT_CONTROL COMMA  &right_alpha_mod LEFT_WIN DOT  &right_alpha_mod LEFT_ALT SQT  &none
-                                                                          &none                               &mo 2                         &kp SPACE    &kp LEFT_SHIFT  &sl 1                          &mo 13
+&none             &kp Q                  &kp W                  &left_alpha_mod LA(LS(LEFT_WIN)) F  &kp P                    &kp B        &kp J           &kp L                    &left_alpha_mod LA(LS(LEFT_WIN)) U  &kp Y                    &kp P                    &none
+&to 5             &kp A                  &kp R                  &kp S                               &kp T                    &kp G        &kp M           &kp N                    &kp E                               &kp I                    &kp O                    &to 5
+&kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C           &alpha_mod LEFT_SHIFT D  &kp V        &kp K           &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA       &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &none
+                                                                &none                               &mo 2                    &kp SPACE    &kp LEFT_SHIFT  &sl 1                    &mo 13
             >;
 
             label = "Alpha";
