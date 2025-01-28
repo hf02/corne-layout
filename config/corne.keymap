@@ -41,6 +41,16 @@
             key-positions = <20 21>;
             layers = <0>;
         };
+
+        quick_escape {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
+
+        alpha_tab {
+            bindings = <&kp TAB>;
+            key-positions = <15 14>;
+        };
     };
 
     keymap {
