@@ -45,11 +45,13 @@
         quick_escape {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         alpha_tab {
             bindings = <&kp TAB>;
             key-positions = <15 14>;
+            layers = <0>;
         };
     };
 
