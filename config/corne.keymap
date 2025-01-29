@@ -46,33 +46,21 @@
     combos {
         compatible = "zmk,combos";
 
-        quick_backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
-            layers = <0>;
-        };
-
-        quick_escape {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
-        alpha_tab {
-            bindings = <&kp TAB>;
-            key-positions = <15 14>;
-            layers = <0>;
-        };
-
         anki_enter {
             bindings = <&kp ENTER>;
-            key-positions = <7 19 20 8>;
+            key-positions = <7 19>;
             layers = <12>;
         };
 
         anki_more {
             bindings = <&anki_more>;
             key-positions = <21 9>;
+            layers = <12>;
+        };
+
+        anki_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <21 33>;
             layers = <12>;
         };
     };
