@@ -54,13 +54,13 @@
 
         anki_more {
             bindings = <&anki_more>;
-            key-positions = <21 9>;
+            key-positions = <6 18>;
             layers = <12>;
         };
 
         anki_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <21 33>;
+            key-positions = <18 30>;
             layers = <12>;
         };
     };
@@ -217,10 +217,10 @@
 
         Anki {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &kp N3     &kp N4         &kp UP     &none  &none
-&to 0  &none  &none  &none  &none  &none    &none  &kp N1     &kp N2         &kp DOWN   &none  &to 0
-&none  &none  &none  &none  &none  &none    &none  &kp LC(Z)  &kp LS(LC(Z))  &kp SLASH  &none  &none
-                     &none  &to 0  &to 0    &none  &none      &trans
+&none  &none  &none  &none  &none  &none    &kp UP_ARROW  &kp N3     &kp N4         &none  &none  &none
+&to 0  &none  &none  &none  &none  &none    &kp DOWN      &kp N1     &kp N2         &none  &none  &to 0
+&none  &none  &none  &none  &none  &none    &kp SLASH     &kp LC(Z)  &kp LS(LC(Z))  &none  &none  &none
+                     &none  &to 0  &to 0    &none         &none      &trans
             >;
 
             label = "Anki";
