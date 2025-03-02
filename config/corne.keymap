@@ -63,6 +63,18 @@
             key-positions = <18 30>;
             layers = <12>;
         };
+
+        star_symbol {
+            bindings = <&kp ASTERISK>;
+            key-positions = <15 16>;
+            layers = <1>;
+        };
+
+        grave_symbol {
+            bindings = <&kp GRAVE>;
+            key-positions = <14 15>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -96,10 +108,10 @@
 
         Symbols {
             bindings = <
-&none   &kp LS(AT)     &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp GRAVE      &kp EQUAL     &kp LS(COLON)  &kp SEMI  &none       &none
-&trans  &kp LS(UNDER)  &kp SQT       &kp LS(DQT)    &kp MINUS     &kp LS(CARET)    &kp LS(QMARK)  &kp LS(LPAR)  &kp LS(LBRC)   &kp LBKT  &kp LS(LT)  &none
-&none   &kp LS(TILDE)  &kp LS(EXCL)  &kp FSLH       &kp BSLH      &kp LS(AMPS)     &kp LS(STAR)   &kp LS(RPAR)  &kp LS(RBRC)   &kp RBKT  &kp LS(GT)  &none
-                                     &none          &mo 3         &none            &none          &none         &trans
+&none   &none          &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)       &kp GRAVE     &kp EQUAL     &kp LS(COLON)  &kp SEMI  &none       &none
+&trans  &kp LS(UNDER)  &kp SQT       &kp LS(DQT)    &kp MINUS     &kp LS(QUESTION)    &kp CARET     &kp LS(LPAR)  &kp LS(LBRC)   &kp LBKT  &kp LS(LT)  &none
+&none   &kp LS(TILDE)  &kp LS(EXCL)  &kp FSLH       &kp BSLH      &kp LS(AMPS)        &kp LS(STAR)  &kp LS(RPAR)  &kp LS(RBRC)   &kp RBKT  &kp LS(GT)  &none
+                                     &none          &mo 3         &none               &none         &none         &trans
             >;
 
             label = "Symbl";
@@ -207,7 +219,7 @@
         Video {
             bindings = <
 &none  &kp ENTER  &kp UP_ARROW  &kp J      &kp L       &none        &none  &kp SPACE  &kp RIGHT  &kp L     &kp DOT    &none
-&to 0  &kp C      &kp DOWN      &kp LEFT   &kp RIGHT   &none        &none  &kp RET    &kp LEFT   &kp J     &kp COMMA  &none
+&to 0  &kp C      &kp DOWN      &kp LEFT   &kp RIGHT   &none        &none  &kp RET    &kp LEFT   &kp J     &kp COMMA  &to 0
 &none  &none      &kp I         &kp COMMA  &kp PERIOD  &none        &none  &kp C      &kp UP     &kp DOWN  &none      &none
                                 &none      &none       &kp SPACE    &to 0  &none      &trans
             >;
