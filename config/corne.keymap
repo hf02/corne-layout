@@ -88,7 +88,7 @@
 &none             &kp Q                  &kp W                  &alpha_mod LA(LS(LEFT_WIN)) F  &kp P                    &kp B        &kp J           &kp L                    &alpha_mod LA(LS(LEFT_WIN)) U  &kp Y                    &kp P                    &none
 &to 5             &kp A                  &kp R                  &kp S                          &kp T                    &kp G        &kp M           &kp N                    &kp E                          &kp I                    &kp O                    &to 5
 &kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C      &alpha_mod LEFT_SHIFT D  &kp V        &kp K           &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &none
-                                                                &none                          &mo 2                    &kp SPACE    &kp LEFT_SHIFT  &sl 1                    &mo 13
+                                                                &none                          &mo 2                    &kp SPACE    &sk LEFT_SHIFT  &sl 1                    &mo 13
             >;
 
             label = "Alpha";
@@ -110,7 +110,7 @@
 &none   &none         &kp ESC       &to 7      &kp K_CONTEXT_MENU  &none    &none            &kp HOME  &kp END  &kp DEL    &none  &none
 &trans  &kp LEFT_ALT  &kp LEFT_WIN  &kp LCTRL  &kp LSHFT           &none    &kp LEFT         &kp DOWN  &kp UP   &kp RIGHT  &none  &none
 &none   &none         &kp LC(X)     &kp LC(C)  &kp LC(V)           &none    &kp PRINTSCREEN  &kp TAB   &kp RET  &kp BSPC   &none  &none
-                                    &none      &none               &none    &none            &mo 4     &trans
+                                    &none      &none               &none    &mo 4            &mo 3     &trans
             >;
 
             label = "Extnd";
