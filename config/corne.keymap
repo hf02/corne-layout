@@ -41,6 +41,15 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        quick_sticky: quick_sticky {
+            compatible = "zmk,behavior-sticky-key";
+            label = "QUICK_STICKY";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <200>;
+        };
     };
 
     combos {
@@ -174,10 +183,10 @@
 
         Game {
             bindings = <
-&kp GRAVE  &kp TAB    &kp Q  &kp W         &kp E  &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
-&kp ESC    &mo 9      &kp A  &kp S         &kp D  &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
-&kp LCTRL  &kp LSHFT  &kp Z  &kp X         &kp C  &kp V        &none     &none     &none         &none      &none  &none
-                             &kp LEFT_ALT  &mo 8  &kp SPACE    &kp DOWN  &to 0     &trans
+&kp GRAVE  &kp TAB          &kp Q  &kp W         &kp E  &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
+&kp ESC    &quick_sticky 9  &kp A  &kp S         &kp D  &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
+&kp LCTRL  &kp LSHFT        &kp Z  &kp X         &kp C  &kp V        &none     &none     &none         &none      &none  &none
+                                   &kp LEFT_ALT  &mo 8  &kp SPACE    &kp DOWN  &to 0     &trans
             >;
 
             label = "Game";
@@ -191,7 +200,7 @@
                         &trans  &trans     &trans     &trans  &trans  &trans
             >;
 
-            label = "Game S";
+            label = "G Sft";
         };
 
         GameNumber {
@@ -202,7 +211,7 @@
                         &trans  &mo 10  &kp N0    &trans  &trans  &trans
             >;
 
-            label = "Game N";
+            label = "G Num";
         };
 
         GameFunction {
@@ -213,7 +222,7 @@
                         &trans  &trans  &trans     &trans  &trans  &trans
             >;
 
-            label = "Game F";
+            label = "G Fun";
         };
 
         Video {
@@ -246,7 +255,7 @@
                       &none  &none  &none    &none  &none       &trans
             >;
 
-            label = "Global";
+            label = "Globl";
         };
     };
 };
