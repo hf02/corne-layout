@@ -42,12 +42,22 @@
             flavor = "tap-preferred";
         };
 
-        quick_sticky: quick_sticky {
+        quick_sl: quick_sl {
             compatible = "zmk,behavior-sticky-key";
-            label = "QUICK_STICKY";
+            label = "QUICK_SL";
             bindings = <&mo>;
             #binding-cells = <1>;
             quick-release;
+            release-after-ms = <200>;
+        };
+
+        quick_sk: quick_sk {
+            compatible = "zmk,behavior-sticky-key";
+            label = "QUICK_SK";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            ignore-modifiers;
             release-after-ms = <200>;
         };
     };
@@ -106,10 +116,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none             &kp Q                  &kp W                  &alpha_mod LA(LS(LEFT_WIN)) F  &kp P                    &kp B        &kp J           &kp L                    &alpha_mod LA(LS(LEFT_WIN)) U  &kp Y                    &kp P                    &none
-&to 5             &kp A                  &kp R                  &kp S                          &kp T                    &kp G        &kp M           &kp N                    &kp E                          &kp I                    &kp O                    &to 5
-&kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C      &alpha_mod LEFT_SHIFT D  &kp V        &kp K           &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &none
-                                                                &none                          &mo 2                    &kp SPACE    &sk LEFT_SHIFT  &sl 1                    &mo 13
+&none             &kp Q                  &kp W                  &alpha_mod LA(LS(LEFT_WIN)) F  &kp P                    &kp B        &kp J                 &kp L                    &alpha_mod LA(LS(LEFT_WIN)) U  &kp Y                    &kp P                    &none
+&to 5             &kp A                  &kp R                  &kp S                          &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
+&kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C      &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &none
+                                                                &none                          &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 13
             >;
 
             label = "Alpha";
@@ -183,10 +193,10 @@
 
         Game {
             bindings = <
-&kp GRAVE  &kp TAB          &kp Q  &kp W         &kp E  &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
-&kp ESC    &quick_sticky 9  &kp A  &kp S         &kp D  &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
-&kp LCTRL  &kp LSHFT        &kp Z  &kp X         &kp C  &kp V        &none     &none     &none         &none      &none  &none
-                                   &kp LEFT_ALT  &mo 8  &kp SPACE    &kp DOWN  &to 0     &trans
+&kp GRAVE  &kp TAB      &kp Q  &kp W         &kp E  &kp R        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
+&kp ESC    &quick_sl 9  &kp A  &kp S         &kp D  &kp F        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
+&kp LCTRL  &kp LSHFT    &kp Z  &kp X         &kp C  &kp V        &none     &none     &none         &none      &none  &none
+                               &kp LEFT_ALT  &mo 8  &kp SPACE    &kp DOWN  &to 0     &trans
             >;
 
             label = "Game";
