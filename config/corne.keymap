@@ -270,8 +270,8 @@
 
         KritaAlt {
             bindings = <
-&none  &none  &kp LC(LS(A))  &kp LC(LS(LA(J)))  &none      &none        &none  &none  &none   &none  &none  &none
-&to 0  &none  &kp LC(G)      &kp LC(R)          &kp T      &none        &none  &none  &none   &none  &none  &none
+&none  &none  &kp LC(LS(A))  &kp LC(LS(LA(J)))  &kp LC(R)  &none        &none  &none  &none   &none  &none  &none
+&to 0  &none  &kp LC(G)      &kp INS            &kp T      &none        &none  &none  &none   &none  &none  &none
 &none  &none  &kp LC(X)      &kp LC(C)          &kp LC(V)  &none        &none  &none  &none   &none  &none  &none
                              &none              &none      &kp SPACE    &none  &none  &trans
             >;
