@@ -119,7 +119,7 @@
 &none             &kp Q                  &kp W                  &alpha_mod LA(LS(LEFT_WIN)) F  &kp P                    &kp B        &kp J                 &kp L                    &alpha_mod LA(LS(LEFT_WIN)) U  &kp Y                    &kp P                    &none
 &to 5             &kp A                  &kp R                  &kp S                          &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
 &kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C      &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &none
-                                                                &none                          &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 13
+                                                                &none                          &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 15
             >;
 
             label = "Alpha";
@@ -171,10 +171,10 @@
 
         Portal {
             bindings = <
-&to 6  &to 4  &to 3   &to 2  &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
-&to 0  &none  &to 12  &none  &to 11  &none    &none  &to 11  &none   &to 12  &none  &to 0
-&none  &none  &none   &none  &none   &none    &none  &none   &none   &none   &none  &none
-                      &none  &none   &none    &none  &none   &trans
+&to 6  &to 4  &to 3   &to 2   &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
+&to 0  &none  &to 12  &to 13  &to 11  &none    &none  &to 11  &to 13  &to 12  &none  &to 0
+&none  &none  &none   &none   &none   &none    &none  &none   &none   &none   &none  &none
+                      &none   &none   &none    &none  &none   &trans
             >;
 
             label = "Portl";
@@ -255,6 +255,28 @@
             >;
 
             label = "Anki";
+        };
+
+        Krita {
+            bindings = <
+&none  &none  &kp B  &kp LCTRL  &kp LSHFT      &none        &none     &none     &none   &none      &none  &none
+&to 0  &none  &kp R  &kp LC(Z)  &kp E          &none        &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none  &none  &none  &none      &kp LC(LS(Z))  &none        &none     &none     &none   &none      &none  &none
+                     &none      &mo 14         &kp SPACE    &none     &none     &trans
+            >;
+
+            label = "Krita";
+        };
+
+        KritaAlt {
+            bindings = <
+&none  &none  &kp LC(LS(A))  &kp LC(LS(LA(J)))  &none      &none        &none  &none  &none   &none  &none  &none
+&to 0  &none  &kp LC(G)      &kp LC(R)          &kp T      &none        &none  &none  &none   &none  &none  &none
+&none  &none  &kp LC(X)      &kp LC(C)          &kp LC(V)  &none        &none  &none  &none   &none  &none  &none
+                             &none              &none      &kp SPACE    &none  &none  &trans
+            >;
+
+            label = "K Alt";
         };
 
         Global {
