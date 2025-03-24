@@ -281,7 +281,7 @@
 
         Global {
             bindings = <
-&none   &none  &none  &none  &none  &none    &none  &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none
+&none   &none  &none  &none  &none  &none    &none  &kp LG(L)   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none
 &trans  &none  &none  &none  &none  &none    &none  &kp C_PREV  &kp C_PLAY_PAUSE      &kp C_NEXT            &none  &none
 &none   &none  &none  &none  &none  &none    &none  &kp C_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none  &none
                       &none  &none  &none    &none  &none       &trans
