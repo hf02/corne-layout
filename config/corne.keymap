@@ -172,8 +172,8 @@
         Portal {
             bindings = <
 &to 6  &to 4  &to 3   &to 2   &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
-&to 0  &none  &to 12  &to 13  &to 15  &none    &none  &to 11  &to 13  &to 12  &none  &to 0
-&none  &none  &none   &none   &to 11  &none    &none  &none   &none   &none   &none  &none
+&to 0  &none  &to 12  &to 13  &to 15  &none    &none  &to 15  &to 13  &to 12  &none  &to 0
+&none  &none  &none   &none   &to 11  &none    &none  &to 11  &none   &none   &none  &none
                       &none   &none   &none    &none  &none   &trans
             >;
 
