@@ -124,7 +124,7 @@
             bindings = <
 &none             &kp Q                  &kp W                  &alpha_mod LA(LS(LEFT_WIN)) F  &kp P                    &kp B        &kp J                 &kp L                    &alpha_mod LA(LS(LEFT_WIN)) U  &kp Y                    &kp P                    &none
 &to 5             &kp A                  &kp R                  &kp S                          &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
-&kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C      &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &none
+&kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C      &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &kp RCTRL
                                                                 &none                          &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 17
             >;
 
