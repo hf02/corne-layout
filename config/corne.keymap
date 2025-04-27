@@ -91,7 +91,7 @@
 
         grave_symbol {
             bindings = <&kp GRAVE>;
-            key-positions = <14 15>;
+            key-positions = <2 3>;
             layers = <1>;
         };
 
