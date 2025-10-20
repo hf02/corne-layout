@@ -60,6 +60,15 @@
             ignore-modifiers;
             release-after-ms = <200>;
         };
+
+        portal_switch: portal_switch {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PORTAL_SWITCH";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -125,7 +134,7 @@
 &none             &kp Q                  &kp W                  &alpha_mod LEFT_WIN F      &kp P                    &kp B        &kp J                 &kp L                    &alpha_mod LEFT_WIN U          &kp Y                    &kp P                    &none
 &to 5             &kp A                  &kp R                  &kp S                      &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
 &kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C  &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &kp RCTRL
-                                                                &none                      &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 17
+                                                                &portal_switch 5 0         &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 17
             >;
 
             label = "Alpha";
@@ -136,7 +145,7 @@
 &none   &none          &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)       &kp GRAVE     &kp EQUAL     &kp LS(COLON)  &kp SEMI  &none       &none
 &trans  &kp LS(UNDER)  &kp SQT       &kp LS(DQT)    &kp MINUS     &kp LS(QUESTION)    &kp CARET     &kp LS(LPAR)  &kp LS(LBRC)   &kp LBKT  &kp LS(LT)  &none
 &none   &kp LS(TILDE)  &kp LS(EXCL)  &kp FSLH       &kp BSLH      &kp LS(AMPS)        &kp LS(STAR)  &kp LS(RPAR)  &kp LS(RBRC)   &kp RBKT  &kp LS(GT)  &none
-                                     &none          &mo 3         &none               &none         &none         &trans
+                                     &trans         &mo 3         &none               &none         &none         &trans
             >;
 
             label = "Symbl";
@@ -147,7 +156,7 @@
 &none   &none         &kp ESC       &to 7      &kp K_CONTEXT_MENU  &none    &none            &kp HOME  &kp END  &kp DEL    &none  &none
 &trans  &kp LEFT_ALT  &kp LEFT_WIN  &kp LCTRL  &kp LSHFT           &none    &kp LEFT         &kp DOWN  &kp UP   &kp RIGHT  &none  &none
 &none   &none         &kp LC(X)     &kp LC(C)  &kp LC(V)           &none    &kp PRINTSCREEN  &kp TAB   &kp RET  &kp BSPC   &none  &none
-                                    &none      &none               &none    &mo 4            &mo 3     &trans
+                                    &trans     &none               &none    &mo 4            &mo 3     &trans
             >;
 
             label = "Extnd";
@@ -158,7 +167,7 @@
 &none   &none  &kp LS(PIPE)   &kp LS(TILDE)  &kp GRAVE     &none    &kp GRAVE     &kp N7  &kp N8  &kp N9  &none   &none
 &trans  &none  &kp DOT        &kp N0         &kp LS(PLUS)  &none    &kp FSLH      &kp N4  &kp N5  &kp N6  &kp N0  &none
 &none   &none  &kp LS(UNDER)  &kp EQUAL      &kp MINUS     &none    &kp LS(STAR)  &kp N1  &kp N2  &kp N3  &none   &none
-                              &none          &none         &none    &none         &none   &trans
+                              &trans         &none         &none    &none         &none   &trans
             >;
 
             label = "Numbr";
@@ -169,7 +178,7 @@
 &none   &none         &none         &none         &none         &none           &none  &kp F7  &kp F8  &kp F9  &kp F12  &none
 &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_SEL 4    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
 &none   &none         &none         &none         &none         &none           &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
-                                    &none         &none         &none           &none  &none   &trans
+                                    &trans        &none         &none           &none  &none   &trans
             >;
 
             label = "Fnctn";
@@ -178,9 +187,9 @@
         Portal {
             bindings = <
 &to 6  &to 4  &to 3   &to 2   &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
-&to 0  &none  &to 12  &to 13  &to 15  &none    &none  &to 15  &to 13  &to 12  &none  &to 0
+&none  &none  &to 12  &to 13  &to 15  &none    &none  &to 15  &to 13  &to 12  &none  &to 0
 &none  &none  &none   &none   &to 11  &none    &none  &to 11  &none   &none   &none  &none
-                      &none   &none   &none    &none  &none   &trans
+                      &trans  &none   &none    &none  &none   &trans
             >;
 
             label = "Portl";
@@ -188,10 +197,10 @@
 
         Board {
             bindings = <
-&to 0  &none          &none          &none          &bt BT_CLR     &bootloader      &bootloader    &bt BT_CLR     &none          &none          &none          &to 0
-&to 0  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_SEL 4     &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &to 0
+&none  &none          &none          &none          &bt BT_CLR     &bootloader      &bootloader    &bt BT_CLR     &none          &none          &none          &to 0
+&none  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_SEL 4     &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &to 0
 &none  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1  &bt BT_DISC 0  &bt BT_DISC 4    &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none
-                                     &none          &none          &none            &none          &none          &trans
+                                     &trans         &none          &none            &none          &none          &trans
             >;
 
             label = "Board";
@@ -244,9 +253,9 @@
         Video {
             bindings = <
 &none  &kp ENTER  &kp UP_ARROW  &kp J      &kp L       &none        &none  &kp SPACE  &kp RIGHT  &kp L     &kp DOT    &none
-&to 0  &kp C      &kp DOWN      &kp LEFT   &kp RIGHT   &none        &none  &kp RET    &kp LEFT   &kp J     &kp COMMA  &to 0
+&none  &kp C      &kp DOWN      &kp LEFT   &kp RIGHT   &none        &none  &kp RET    &kp LEFT   &kp J     &kp COMMA  &to 0
 &none  &none      &kp I         &kp COMMA  &kp PERIOD  &none        &none  &kp C      &kp UP     &kp DOWN  &none      &none
-                                &none      &none       &kp SPACE    &to 0  &none      &trans
+                                &trans     &none       &kp SPACE    &to 0  &none      &trans
             >;
 
             label = "Video";
@@ -254,10 +263,10 @@
 
         Anki {
             bindings = <
-&none  &none  &none  &none  &none  &none    &kp UP_ARROW  &kp N3     &kp N4         &kp LC(NUMBER_1)  &none  &none
-&to 0  &none  &none  &none  &none  &none    &kp DOWN      &kp N1     &kp N2         &kp MINUS         &none  &to 0
-&none  &none  &none  &none  &none  &none    &kp SLASH     &kp LC(Z)  &kp LS(LC(Z))  &kp AT_SIGN       &none  &none
-                     &none  &to 0  &to 0    &kp Y         &none      &trans
+&none  &none  &none  &none   &none  &none    &kp UP_ARROW  &kp N3     &kp N4         &kp LC(NUMBER_1)  &none  &none
+&none  &none  &none  &none   &none  &none    &kp DOWN      &kp N1     &kp N2         &kp MINUS         &none  &to 0
+&none  &none  &none  &none   &none  &none    &kp SLASH     &kp LC(Z)  &kp LS(LC(Z))  &kp AT_SIGN       &none  &none
+                     &trans  &none  &none    &kp Y         &none      &trans
             >;
 
             label = "Anki";
@@ -266,9 +275,9 @@
         Krita {
             bindings = <
 &none  &none  &kp LC(R)  &kp LCTRL  &kp T           &kp F            &none     &none     &none   &none      &none  &none
-&to 0  &kp B  &kp R      &kp LC(Z)  &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none  &kp B  &kp R      &kp LC(Z)  &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
 &none  &none  &none      &none      &kp LEFT_SHIFT  &none            &none     &none     &none   &none      &none  &none
-                         &none      &mo 14          &kp SPACE        &none     &to 0     &trans
+                         &trans     &mo 14          &kp SPACE        &none     &to 0     &trans
             >;
 
             label = "Krita";
@@ -277,9 +286,9 @@
         KritaAlt {
             bindings = <
 &none  &none  &kp LC(LS(A))  &kp LC(LS(LA(J)))  &kp DEL    &kp LS(DEL)    &none  &none  &none   &none  &none  &none
-&to 0  &none  &kp LC(G)      &kp INS            &kp LC(J)  &none          &none  &none  &none   &none  &none  &none
+&none  &none  &kp LC(G)      &kp INS            &kp LC(J)  &none          &none  &none  &none   &none  &none  &none
 &none  &none  &kp LC(X)      &kp LC(C)          &kp LC(V)  &none          &none  &none  &none   &none  &none  &none
-                             &none              &none      &kp SPACE      &none  &none  &trans
+                             &trans             &none      &kp SPACE      &none  &none  &trans
             >;
 
             label = "K Alt";
@@ -288,9 +297,9 @@
         Pdn {
             bindings = <
 &none  &none  &kp P  &kp S      &kp M      &kp F        &none     &none     &none   &none      &none  &none
-&to 0  &none  &kp B  &kp LC(Z)  &kp K      &kp LC(Y)    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none  &none  &kp B  &kp LC(Z)  &kp K      &kp LC(Y)    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
 &none  &none  &kp X  &kp C      &kp LC(S)  &none        &none     &none     &none   &none      &none  &none
-                     &none      &mo 16     &kp SPACE    &none     &to 0     &trans
+                     &trans     &mo 16     &kp SPACE    &none     &to 0     &trans
             >;
 
             label = "PDN";
@@ -299,9 +308,9 @@
         PdnAlt {
             bindings = <
 &none  &none  &kp ESC    &kp BSPC   &kp DEL    &none    &none  &none  &none   &none  &none  &none
-&to 0  &none  &kp LALT   &kp LCTRL  &kp LSHFT  &none    &none  &none  &none   &none  &none  &none
+&none  &none  &kp LALT   &kp LCTRL  &kp LSHFT  &none    &none  &none  &none   &none  &none  &none
 &none  &none  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none    &none  &none  &none   &none  &none  &none
-                         &none      &none      &none    &none  &none  &trans
+                         &trans     &none      &none    &none  &none  &trans
             >;
 
             label = "P Alt";
@@ -309,10 +318,10 @@
 
         Global {
             bindings = <
-&none   &none  &none  &none  &none  &none    &none  &kp LG(L)   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LG(LA(B)))  &none
-&trans  &none  &none  &none  &none  &none    &none  &kp C_PREV  &kp C_PLAY_PAUSE      &kp C_NEXT            &kp LA(LS(LG(P)))  &none
-&none   &none  &none  &none  &none  &none    &none  &kp C_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp LS(LG(LA(Q)))  &none
-                      &none  &none  &none    &none  &none       &trans
+&none  &none  &none  &none   &none  &none    &none  &kp LG(L)   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LG(LA(B)))  &none
+&none  &none  &none  &none   &none  &none    &none  &kp C_PREV  &kp C_PLAY_PAUSE      &kp C_NEXT            &kp LA(LS(LG(P)))  &none
+&none  &none  &none  &none   &none  &none    &none  &kp C_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp LS(LG(LA(Q)))  &none
+                     &trans  &none  &none    &none  &none       &trans
             >;
 
             label = "Globl";
