@@ -274,10 +274,10 @@
 
         Krita {
             bindings = <
-&none  &none  &kp LC(R)  &kp LCTRL  &kp T           &kp F            &none     &none     &none   &none      &none  &none
-&none  &kp B  &kp R      &kp LC(Z)  &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
-&none  &none  &none      &none      &kp LEFT_SHIFT  &none            &none     &none     &none   &none      &none  &none
-                         &trans     &mo 14          &kp SPACE        &none     &to 0     &trans
+&none  &none  &kp LC(R)  &kp LCTRL          &kp T           &kp F            &none     &none     &none   &none      &none  &none
+&none  &kp B  &kp R      &kp LC(Z)          &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none  &none  &none      &kp LC(LA(SPACE))  &kp LEFT_SHIFT  &none            &none     &none     &none   &none      &none  &none
+                         &trans             &mo 14          &kp SPACE        &none     &to 0     &trans
             >;
 
             label = "Krita";
