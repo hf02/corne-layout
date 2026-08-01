@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -107,7 +108,7 @@
         save {
             bindings = <&kp LC(S)>;
             key-positions = <14 15>;
-            layers = <13 15>;
+            layers = <13 16>;
         };
     };
 
@@ -117,6 +118,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp M>;
             label = "ANKI_MORE";
+        };
+
+        krita_pan: krita_pan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 15>;
+            label = "KRITA_PAN";
         };
     };
 
@@ -134,7 +142,7 @@
 &none             &kp Q                  &kp W                  &alpha_mod LEFT_WIN F      &kp P                    &kp B        &kp J                 &kp L                    &alpha_mod LEFT_WIN U          &kp Y                    &kp P                    &none
 &to 5             &kp A                  &kp R                  &kp S                      &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
 &kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C  &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &kp RCTRL
-                                                                &portal_switch 5 0         &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 17
+                                                                &portal_switch 5 0         &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 18
             >;
 
             label = "Alpha";
@@ -187,7 +195,7 @@
         Portal {
             bindings = <
 &to 6  &to 4  &to 3   &to 2   &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
-&none  &none  &to 12  &to 13  &to 15  &none    &none  &to 15  &to 13  &to 12  &none  &to 0
+&none  &none  &to 12  &to 13  &to 16  &none    &none  &to 16  &to 13  &to 12  &none  &to 0
 &none  &none  &none   &none   &to 11  &none    &none  &to 11  &none   &none   &none  &none
                       &trans  &none   &none    &none  &none   &trans
             >;
@@ -274,10 +282,10 @@
 
         Krita {
             bindings = <
-&none  &none  &kp LC(R)  &kp LCTRL          &kp T           &kp F            &none     &none     &none   &none      &none  &none
-&none  &kp B  &kp R      &kp LC(Z)          &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
-&none  &none  &none      &kp LC(LA(SPACE))  &kp LEFT_SHIFT  &none            &none     &none     &none   &none      &none  &none
-                         &trans             &mo 14          &kp SPACE        &none     &to 0     &trans
+&none  &msc SCRL_UP    &kp LC(R)  &kp LCTRL          &kp T           &kp F            &none     &none     &none   &none      &none  &none
+&none  &kp B           &kp R      &kp LC(Z)          &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+&none  &msc SCRL_DOWN  &none      &kp LC(LA(SPACE))  &kp LEFT_SHIFT  &none            &none     &none     &none   &none      &none  &none
+                                  &trans             &mo 14          &kp SPACE        &none     &to 0     &trans
             >;
 
             label = "Krita";
@@ -288,10 +296,21 @@
 &none  &none  &kp LC(LS(A))  &kp LC(LS(LA(J)))  &kp DEL    &kp LS(DEL)    &none  &none  &none   &none  &none  &none
 &none  &none  &kp LC(G)      &kp INS            &kp LC(J)  &none          &none  &none  &none   &none  &none  &none
 &none  &none  &kp LC(X)      &kp LC(C)          &kp LC(V)  &none          &none  &none  &none   &none  &none  &none
-                             &trans             &none      &kp SPACE      &none  &none  &trans
+                             &trans             &none      &mo 15         &none  &none  &trans
             >;
 
             label = "K Alt";
+        };
+
+        KritaPan {
+            bindings = <
+&none  &none  &none  &none   &none  &none    &none  &none  &none   &none  &none  &none
+&none  &none  &none  &none   &none  &none    &none  &none  &none   &none  &none  &none
+&none  &none  &none  &none   &none  &none    &none  &none  &none   &none  &none  &none
+                     &trans  &none  &none    &none  &none  &trans
+            >;
+
+            label = "K Pan";
         };
 
         Pdn {
@@ -299,7 +318,7 @@
 &none  &none  &kp P  &kp S      &kp M      &kp F        &none     &none     &none   &none      &none  &none
 &none  &none  &kp B  &kp LC(Z)  &kp K      &kp LC(Y)    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
 &none  &none  &kp X  &kp C      &kp LC(S)  &none        &none     &none     &none   &none      &none  &none
-                     &trans     &mo 16     &kp SPACE    &none     &to 0     &trans
+                     &trans     &mo 17     &kp SPACE    &none     &to 0     &trans
             >;
 
             label = "PDN";
