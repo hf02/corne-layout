@@ -77,19 +77,19 @@
         anki_enter {
             bindings = <&kp ENTER>;
             key-positions = <7 19>;
-            layers = <12>;
+            layers = <13>;
         };
 
         anki_more {
             bindings = <&anki_more>;
             key-positions = <6 18>;
-            layers = <12>;
+            layers = <13>;
         };
 
         anki_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <18 30>;
-            layers = <12>;
+            layers = <13>;
         };
 
         star_symbol {
@@ -107,7 +107,7 @@
         save {
             bindings = <&kp LC(S)>;
             key-positions = <14 15>;
-            layers = <13 15>;
+            layers = <14 16>;
         };
     };
 
@@ -139,9 +139,9 @@
 
             bindings = <
 &none             &kp Q                  &kp W                  &alpha_mod LEFT_WIN F      &kp P                    &kp B        &kp J                 &kp L                    &alpha_mod LEFT_WIN U          &kp Y                    &kp P                    &none
-&to 5             &kp A                  &kp R                  &kp S                      &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
+&none             &kp A                  &kp R                  &kp S                      &kp T                    &kp G        &kp M                 &kp N                    &kp E                          &kp I                    &kp O                    &to 5
 &kp LEFT_CONTROL  &alpha_mod LEFT_ALT Z  &alpha_mod LEFT_WIN X  &alpha_mod LEFT_CONTROL C  &alpha_mod LEFT_SHIFT D  &kp V        &kp K                 &alpha_mod LEFT_SHIFT H  &alpha_mod LEFT_CONTROL COMMA  &alpha_mod LEFT_WIN DOT  &alpha_mod LEFT_ALT SQT  &kp RCTRL
-                                                                &portal_switch 5 0         &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 17
+                                                                &portal_switch 5 0         &mo 2                    &kp SPACE    &quick_sk LEFT_SHIFT  &quick_sl 1              &mo 18
             >;
 
             label = "Alpha";
@@ -193,9 +193,9 @@
 
         Portal {
             bindings = <
-&to 6  &to 4  &to 3   &to 2   &to 1   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
-&none  &none  &to 12  &to 13  &to 15  &none    &none  &to 15  &to 13  &to 12  &none  &to 0
-&none  &none  &none   &none   &to 11  &none    &none  &to 11  &none   &none   &none  &none
+&to 6  &none  &none   &to 11  &none   &none    &none  &to 1   &to 2   &to 3   &to 4  &to 6
+&none  &none  &to 13  &to 14  &to 16  &none    &none  &to 16  &to 14  &to 13  &none  &to 0
+&none  &none  &none   &none   &to 12  &none    &none  &to 12  &none   &none   &none  &none
                       &trans  &none   &none    &none  &none   &trans
             >;
 
@@ -257,6 +257,16 @@
             label = "G Fun";
         };
 
+        GameArrows {
+            label = "GamA";
+            bindings = <
+&kp GRAVE  &kp TAB      &none     &kp UP        &none      &none        &none     &none     &kp UP_ARROW  &none      &none  &kp BSPC
+&kp ESC    &quick_sl 9  &kp LEFT  &kp DOWN      &kp RIGHT  &none        &none     &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp ENTER
+&kp LCTRL  &kp LSHFT    &none     &none         &none      &none        &none     &none     &none         &none      &none  &none
+                                  &kp LEFT_ALT  &mo 8      &kp SPACE    &kp DOWN  &to 0     &trans
+            >;
+        };
+
         Video {
             bindings = <
 &none  &kp ENTER  &kp UP_ARROW  &kp J      &kp L       &none        &none  &kp SPACE  &kp RIGHT  &kp L     &kp DOT    &none
@@ -284,7 +294,7 @@
 &none  &kp LC(EQUAL)  &kp LC(R)  &kp LCTRL          &kp T           &kp F            &none     &none     &none   &none      &none  &none
 &none  &kp B          &kp R      &kp LC(Z)          &kp E           &kp LC(LS(Z))    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
 &none  &kp LC(MINUS)  &none      &kp LC(LA(SPACE))  &kp LEFT_SHIFT  &none            &none     &none     &none   &none      &none  &none
-                                 &trans             &mo 14          &kp SPACE        &none     &to 0     &trans
+                                 &trans             &mo 15          &kp SPACE        &none     &to 0     &trans
             >;
 
             label = "Krita";
@@ -306,7 +316,7 @@
 &none  &none  &kp P  &kp S      &kp M      &kp F        &none     &none     &none   &none      &none  &none
 &none  &none  &kp B  &kp LC(Z)  &kp K      &kp LC(Y)    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
 &none  &none  &kp X  &kp C      &kp LC(S)  &none        &none     &none     &none   &none      &none  &none
-                     &trans     &mo 16     &kp SPACE    &none     &to 0     &trans
+                     &trans     &mo 17     &kp SPACE    &none     &to 0     &trans
             >;
 
             label = "PDN";
